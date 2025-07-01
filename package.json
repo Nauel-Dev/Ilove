@@ -1,11 +1,12 @@
+
 {
 "name": "ilove",
 "version": "1.0.0",
 "scripts": {
-"dev": "node node_modules/.bin/vite dev",
-"build": "node node_modules/.bin/vite build",
-"serve": "node node_modules/.bin/vite preview",
-"start": "node node_modules/.bin/vite dev"
+"dev": "npx vite dev",
+"build": "npx vite build",
+"serve": "npx vite preview",
+"start": "npx vite dev"
 },
 "dependencies": {
 "framer-motion": "12.20.5",
