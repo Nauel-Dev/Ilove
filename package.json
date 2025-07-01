@@ -2,6 +2,7 @@
 {
 "name": "ilove",
 "version": "1.0.0",
+"type": "module",
 "scripts": {
 "dev": "npx vite dev",
 "build": "npx vite build",
