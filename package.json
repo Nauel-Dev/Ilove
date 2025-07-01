@@ -1,3 +1,4 @@
+
 {
 "name": "ilove",
 "version": "1.0.0",
@@ -5,7 +6,8 @@
 "dev": "npx vite dev",
 "build": "npx vite build",
 "serve": "npx vite preview",
-"start": "npx vite dev"
+"start": "npx vite dev",
+"postinstall": "chmod +x node_modules/.bin/vite"
 },
 "dependencies": {
 "framer-motion": "12.20.5",
