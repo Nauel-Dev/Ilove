@@ -1,0 +1,143 @@
+/* Fade out animation for the whole popup */
+.popup-background.fade-out,
+.popup-container.fade-out {
+  opacity: 0;
+  transform: scale(0.96);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Pink spinner animation */
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #ff69b4;
+  border-top: 5px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 2rem auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.popup-background {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.popup-container {
+  background: #0e0e1a; /* or white if you want light mode */
+  border-radius: 10px;
+  padding: 1rem;
+  width: fit-content;
+  max-width: 350px;
+  border: 2px solid #d63384;
+  box-shadow: 0 8px 24px rgba(214, 51, 132, 0.3);
+  animation: fadeIn 0.3s ease-in-out;
+
+  display: inline-block; /* ✅ key: don't stretch full height */
+}
+
+/* Compact form layout */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  width: 100%;
+  max-width: 280px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Avatar section */
+.avatar-preview {
+  margin-bottom: 0.4rem;
+}
+
+.animated-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px solid #d63384;
+  animation: pulse 2s infinite;
+}
+
+/* Input styles */
+.signup-form input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.95rem;
+  border: 2px solid #ff69b4;
+  border-radius: 6px;
+  background-color: #fff0f5;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.signup-form input:focus {
+  border-color: #d63384;
+  box-shadow: 0 0 0 2px rgba(214, 51, 132, 0.25);
+}
+
+/* Button */
+.signup-form button {
+  width: 100%;
+  padding: 0.55rem;
+  font-size: 1rem;
+  background-color: #d63384;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.signup-form button:hover {
+  background-color: #c21870;
+}
+
+/* Animations */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.popup-container {
+  animation: popupIn 0.4s ease-out;
+}
+
+@keyframes popupIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

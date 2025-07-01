@@ -1,0 +1,83 @@
+.intro-container {
+  position: relative;
+  height: 100vh;
+  background: radial-gradient(circle at center, #1b1b2f, #090918);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mute-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  color: #ff99ff;
+  border: 2px solid #ff99ff;
+  border-radius: 6px;
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  font-size: 1rem;
+  z-index: 10;
+}
+
+.walking-icon {
+  position: absolute;
+  bottom: 0;
+  left: -80px;
+  width: 80px;
+  animation: walk 10s linear infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes walk {
+  0% { transform: translateX(-100px); }
+  100% { transform: translateX(100vw); }
+}
+
+.input-frame {
+  margin-top: 2rem;
+  background: rgba(60, 0, 80, 0.7);
+  padding: 1rem 2rem;
+  border: 2px dotted #ff66cc;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.password-prompt {
+  font-family: 'Arial Black', sans-serif;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #ff99ff;
+  margin-bottom: 0.5rem;
+}
+
+.love-input {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  background: #330033;
+  color: #ff99ff;
+  border: none;
+  outline: none;
+  margin-bottom: 1rem;
+  width: 200px;
+  text-align: center;
+}
+
+.check-btn {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  background: #ff66cc;
+  color: #240046;
+  border: none;
+  cursor: pointer;
+}
+
+.error-text {
+  margin-top: 0.5rem;
+  color: #ff4444;
+}
