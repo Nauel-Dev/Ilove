@@ -20,5 +20,14 @@
 "devDependencies": {
 "vite": "^4.3.9",
 "@vitejs/plugin-react": "4.6.0"
+},
+"vite": {
+"plugins": [
+["@vitejs/plugin-react"]
+],
+"base": "./",
+"build": {
+"outDir": "dist"
+}
 }
 }
